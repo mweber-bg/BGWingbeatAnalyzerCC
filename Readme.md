@@ -98,9 +98,9 @@ Deleting a recording:
 
 # Menu Overview and Analysis Functions
 
-File Menu \> Load WAV directory…: Browse to a directory containing WAV files. All WAV files in the subdirectory tree under this directory will be loaded. If the directory has subdirectories, the WAV files will be grouped accordingly. In the scatter plots and tables, the groups are displayed with different colors. The file menu also has several choices for scaling recordings as they are being read, and for saving processing results.
+**File Menu** \> Load WAV directory…: Browse to a directory containing WAV files. All WAV files in the subdirectory tree under this directory will be loaded. If the directory has subdirectories, the WAV files will be grouped accordingly. In the scatter plots and tables, the groups are displayed with different colors. The file menu also has several choices for scaling recordings as they are being read, and for saving processing results.
 
-Clean Menu: Several methods to remove files with poor signal quality based on certain criteria. Use with caution:
+**Clean Menu**: Several methods to remove files with poor signal quality based on certain criteria. Use with caution:
 
 -   the WAV file(s) will be deleted from their respective subdirectory!
 
@@ -108,17 +108,17 @@ Clean Menu: Several methods to remove files with poor signal quality based on ce
 
 Therefore, when experimenting, keep the original data in a separate directory.
 
-Feature Menu: The choices here allow features to be extracted which are used to generate graphs and perform clustering and machine learning. A good starting point is the default (MFCC). Bernoulli RBM and PCA are not well tested might bomb.
+**Feature Menu**: The choices here allow features to be extracted which are used to generate graphs and perform clustering and machine learning. A good starting point is the default (MFCC). Bernoulli RBM and PCA are not well tested might bomb.
 
-Classifier Menu: If there is more than one group of recordings, the menu items to train one of the classifiers become enabled. XGBoost has consistently produced good results. The model can be stored and used subsequently for classification on newly loaded data.
+**Classifier Menu**: If there is more than one group of recordings, the menu items to train one of the classifiers become enabled. XGBoost has consistently produced good results. The model can be stored and used subsequently for classification on newly loaded data.
 
 Note: make sure the training sets are balanced, i.e. the groups to be trained have approximately the same number of recordings. Else metrics such as accuracy may look good but unknown recordings are likely to be misclassified, especially if they belong to the minority class.
 
-Cluster Menu: Select a clustering algorithm to find clusters of recordings that “belong together” using the currently selected features. This is donw for all the currently displayed recordings, ignoring the original group (if any). Again, the results can be misleading if there is an imbalance between recordings, for example a lot more female mosquitoes than male mosquitoes. DBScan, in particular, can crash the code depending on parameters and data.
+**Cluster Menu**: Select a clustering algorithm to find clusters of recordings that “belong together” using the currently selected features. This is donw for all the currently displayed recordings, ignoring the original group (if any). Again, the results can be misleading if there is an imbalance between recordings, for example a lot more female mosquitoes than male mosquitoes. DBScan, in particular, can crash the code depending on parameters and data.
 
 If a model is loaded, there is a choice to classify the recordings based on the model.
 
-View Menu: The choice here configures the second graph from the left in the top row of the window. These graphs are useful for looking for trends in the data (based on the selected features) and for differences between groups. The t-SNE graph is particularly informative: if there are clear clusters in the data, they will emerge in this graph (for example, male and female mosquitoes of the same species). However, the absence of clusters in t-SNE does not mean that a trained model has low accuracy.
+**View Menu**: The choice here configures the second graph from the left in the top row of the window. These graphs are useful for looking for trends in the data (based on the selected features) and for differences between groups. The t-SNE graph is particularly informative: if there are clear clusters in the data, they will emerge in this graph (for example, male and female mosquitoes of the same species). However, the absence of clusters in t-SNE does not mean that a trained model has low accuracy.
 
 Note: the higher the number of recordings, the longer the t-SNE calculations will take; for several thousand datapoints it could be half an hour or more.
 
