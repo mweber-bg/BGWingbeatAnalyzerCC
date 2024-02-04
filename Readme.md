@@ -1,4 +1,4 @@
-**Biogents Wingbeat Analyzer CC**
+# Biogents Wingbeat Analyzer CC
 
 Author: Michael Weber, michael.weber@biogents.com
 
