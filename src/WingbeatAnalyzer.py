@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-==========================
-Biogents Wingbeat Analyzer
-==========================
+=============================
+Biogents Wingbeat Analyzer CC
+=============================
 Author:     Michael Weber (michael.weber@biogents.com)
+Version:    V245_CC
 Revision:   06/12/22
 
-License:  Biogents Wingbeat Analyzer
+Biogents Wingbeat Analyzer
 © 2014 by Michael Weber, onVector Technology
 © 2019 by Biogents AG
 is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
